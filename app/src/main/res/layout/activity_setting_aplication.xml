@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/bg_toolbar">
+
+    <include
+        android:id="@+id/toolbarSetting"
+        layout="@layout/toolbar_setting"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:background="@drawable/bg_post"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbarSetting">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_margin="10dp">
+
+            <RelativeLayout
+                android:id="@+id/notify"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tvNotify"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Aktifkan Notifikasi"
+                    android:textColor="@color/colorMain"
+                    android:textSize="20sp"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:id="@+id/tvSubNotify"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Notifikasi pada Bar Sistem"
+                    android:layout_below="@id/tvNotify"/>
+
+                <Switch
+                    android:id="@+id/switchNotify"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"/>
+
+                <View
+                    android:id="@+id/divider"
+                    android:layout_width="match_parent"
+                    android:layout_height="3dp"
+                    android:layout_marginTop="3dp"
+                    android:background="@color/colorGraySecondary"
+                    android:layout_below="@id/tvSubNotify"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/ringtone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tvRingtone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Nada Notofikasi"
+                    android:textColor="@color/colorMain"
+                    android:textSize="20sp"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:id="@+id/tvSubRingtone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Pixie Dust"
+                    android:layout_below="@id/tvRingtone"/>
+
+                <View
+                    android:id="@+id/divider2"
+                    android:layout_width="match_parent"
+                    android:layout_height="3dp"
+                    android:layout_marginTop="3dp"
+                    android:background="@color/colorGraySecondary"
+                    android:layout_below="@id/tvSubRingtone"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/sound"
+                android:layout_width="match_parent"
+                android:layout_height="50dp">
+
+                <TextView
+                    android:id="@+id/tvSound"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Suara"
+                    android:layout_marginTop="10dp"
+                    android:textColor="@color/colorMain"
+                    android:textSize="20sp"
+                    android:textStyle="bold"/>
+
+                <CheckBox
+                    android:id="@+id/checkBox1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="7dp"
+                    android:layout_marginEnd="17dp"
+                    android:layout_marginRight="17dp" />
+
+                <View
+                    android:id="@+id/divider3"
+                    android:layout_width="match_parent"
+                    android:layout_height="3dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/colorGraySecondary"
+                    android:layout_below="@id/tvSound"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/vibrate"
+                android:layout_width="match_parent"
+                android:layout_height="50dp">
+
+                <TextView
+                    android:id="@+id/tvVibarate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Bergetar"
+                    android:layout_marginTop="10dp"
+                    android:textColor="@color/colorMain"
+                    android:textSize="20sp"
+                    android:textStyle="bold"/>
+
+                <CheckBox
+                    android:id="@+id/checkBox2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="7dp"
+                    android:layout_marginEnd="17dp"
+                    android:layout_marginRight="17dp" />
+
+                <View
+                    android:id="@+id/divider4"
+                    android:layout_width="match_parent"
+                    android:layout_height="3dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/colorGraySecondary"
+                    android:layout_below="@id/tvVibarate"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/led"
+                android:layout_width="match_parent"
+                android:layout_height="50dp">
+
+                <TextView
+                    android:id="@+id/tvLed"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="LED"
+                    android:layout_marginTop="10dp"
+                    android:textColor="@color/colorMain"
+                    android:textSize="20sp"
+                    android:textStyle="bold"/>
+
+                <CheckBox
+                    android:id="@+id/checkBox3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="7dp"
+                    android:layout_marginEnd="17dp"
+                    android:layout_marginRight="17dp" />
+
+                <View
+                    android:id="@+id/divider5"
+                    android:layout_width="match_parent"
+                    android:layout_height="3dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/colorGraySecondary"
+                    android:layout_below="@id/tvLed"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/location"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tvLocation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Akses Lokasi"
+                    android:textColor="@color/colorMain"
+                    android:textSize="20sp"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:id="@+id/tvSubLocation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Apilkasi dapat mengakses Lokasi Anda"
+                    android:layout_below="@id/tvLocation"/>
+
+                <Switch
+                    android:id="@+id/switchLocation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"/>
+
+            </RelativeLayout>
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

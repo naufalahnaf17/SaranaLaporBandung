@@ -1,0 +1,72 @@
+<resources>
+    <string name="app_name">SaranaLaporBandung</string>
+    <string name="app_name_desc">Sarana Lapor Bandung</string>
+    <string name="motto">Menuju Bandung Juara \nLahir Batin</string>
+    <string name="tutor1">Anda menemukan jalan rusak ? Sehingga \nmembuat anda tidak nyaman ? Laporkan \nlewat Saung agar keluhan anda langsung \nsampai ke pusat</string>
+    <string name="tutor2">Ada pohon tumbang ? Saung bisa \nmembantu Anda untuk melaporkannya\n\n</string>
+    <string name="tutor3">Tumpukan sampah yang belum diatasi ?\nSaung bisa mengatasinya.\n\n</string>
+    <string name="copyright">© My Point 2019</string>
+    <string name="title_activity_main_nav">MainNavActivity</string>
+    <string name="title_home">Home</string>
+    <string name="title_report">Report</string>
+    <string name="title_more">More</string>
+    <string name="app_intro">CEkson</string>
+    <!-- Adding New String -->
+    <string name="aboutTeam">My Point Team [SMKN 4 Bandung]\nNaufal Ahnaf Fauzan\nAip Ariyadi\nBarnes Yosia Nathanael\nIrvan Pebrian</string>
+    <string name="emailTeam">mypointcompany@gmail.com</string>
+    <string name="dialogRate">Berikan review tentang aplikasi ini\npada Google Play Store, bintang ke\nlima adalah review terbaik. Tekan\ntombol "Lanjut" untuk beralih ke\nGoogle Play Store.</string>
+    <string name="detailContactUs">Pertanyaan , Saran Dan Keluhan Isi Formulir Di Bawah Ini</string>
+    <string name="privasiMain">Saat Anda menggunakan aplikasi kami, Anda
+mempercayai kami dengan Informasi Anda.
+Kebijakan Privasi ini dimaksudkan untuk membantu
+Anda memahami data apa yang kami kumpulkan
+dan mengapa kami memerlukannya. Ini penting; kami
+harap Anda meluangkan waktu untuk membacanya
+dengan seksama. Kami akan menjelaskannya dengan
+sesederhana mungkin.</string>
+    <string name="privasiChild1">Aplikasi Saung: Sarana Lapor Bandung ini
+menggunakan Google Analytic untuk mengumpulkan
+informasi perangkat, seperti (model perangkat keras,
+versi sistem operasi, pengenal perangkat unik,
+informasi lokasi umum). Informasi ini digunakan
+untuk meningkatkan bagaimana kami mengetahui
+pengalaman pengguna agar aplikasi ini menjadi lebih
+baik.</string>
+    <string name="privasiChild2">Aplikasi Saung ini menggunakan
+        Firebase Authentication untuk "Sign In",
+        sehingga kami dapat mengidentifikasikan
+        postingan Anda saat menggunakan fitur tambah
+        laporan ke atau dari Cloud kami. Jadi secara
+        tidak langsung alamat Gmail Anda akan
+        disimpan ke dashboard Firebase kami dan
+        database Cloud kami saat Anda menggunakan
+        fitur tersebut. Anda harus tahu, Firebase
+        adalah salah satu produk Google, dan Google
+        tidak akan mengizinkan untuk mengetahui kata
+        sandi (password) Anda dengan cara apa pun, jadi
+        tidak mungkin kami mengumpulkan kata sandi Gmail Anda
+        , kami hanya mengumpulkan alamat Gmail saja untuk mempermudah
+        identifikasi postingan milik Anda. Jadi Anda tidak perlu khawatir
+        kehilangan akun Gmail Anda, dan juga kami tidak akan membagikan
+        alamat Gmail Anda kepada siapa pun untuk tujuan apa pun.</string>
+    <string name="privasiChild3">Aplikasi Saung ini memerlukan GPS
+        untuk dihidupkan saat menggunakan fitur Tambah Laporan
+        agar fiturnya bekerja dengan baik. Hal ini diperlukan untuk mendapatkan Latitude dan Longitude
+        dari lokasi Anda berada agar dapat mendapatkan Lokasi dengan tepat dan juga agar dapat terhubung
+        dengan Google Maps. Anda harus tahu, kami tidak mengumpulkan informasi lokasi Anda ke server kami dengan tujuan buruk.
+        Kami mengumpulkan lokasi Anda ke Google Analytics, agar laporan anda dapat diverifikasi.</string>
+    <string name="privasiChild4">Aplikasi Saung ini memerlukan akses ke penyimpanan di perangkat Anda,
+        sehingga salah satu fitur bekerja dengan baik. Hal ini diperlukan untuk menyimpan data - data akun Anda.
+        Anda harus tahu, kami tidak akan dan tidak berniat untuk mencuri data dari tempat penyimpanan Anda ke server kami.
+    </string>
+    <string name="privasiChild5">Kami telah menerapkan pengamanan administratif dan teknis yang diyakini
+        cukup untuk melindungi kerahasiaan alamat Gmail Anda, dan kami menggunakan Server Pribadi di
+        Cloud kami (bukan Server Bersama).
+    </string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+</resources>

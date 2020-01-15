@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:paddingBottom="10dp"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/imgMenu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_account"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10dp"/>
+
+    <TextView
+        android:id="@+id/tvNameMenu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#1C3B57"
+        android:textSize="20sp"
+        android:text="Akun"
+        android:layout_toRightOf="@id/imgMenu"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10dp"/>
+
+    <ImageView
+        android:id="@+id/imgGo"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:src="@drawable/btn_go"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="10dp"/>
+
+</RelativeLayout>

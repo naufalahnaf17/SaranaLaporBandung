@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_about">
+
+    <TextView
+        android:id="@+id/tvNameApp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        android:fontFamily="@font/fenix"
+        android:text="Sarana Lapor Bandung"
+        android:textColor="@android:color/white"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.17000002" />
+
+    <TextView
+        android:id="@+id/tvVersionApp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="Versi 1.0"
+        android:textColor="@color/colorGraySecondary"
+        app:layout_constraintEnd_toEndOf="@+id/tvNameApp"
+        app:layout_constraintStart_toStartOf="@+id/tvNameApp"
+        app:layout_constraintTop_toBottomOf="@+id/tvNameApp" />
+
+    <ImageView
+        android:id="@+id/logoAbout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="@+id/tvVersionApp"
+        app:layout_constraintStart_toStartOf="@+id/tvVersionApp"
+        app:layout_constraintTop_toBottomOf="@+id/tvVersionApp"
+        app:srcCompat="@drawable/logo_about" />
+
+    <TextView
+        android:id="@+id/tvCopyrightApp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/copyright"
+        android:textColor="@color/colorGraySecondary"
+        app:layout_constraintEnd_toEndOf="@+id/logoAbout"
+        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintStart_toStartOf="@+id/logoAbout"
+        app:layout_constraintTop_toBottomOf="@+id/logoAbout" />
+
+    <TextView
+        android:id="@+id/tvDetailApp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="All Right Reserved"
+        android:textColor="@color/colorGraySecondary"
+        app:layout_constraintEnd_toEndOf="@+id/tvCopyrightApp"
+        app:layout_constraintStart_toStartOf="@+id/tvCopyrightApp"
+        app:layout_constraintTop_toBottomOf="@+id/tvCopyrightApp" />
+
+    <TextView
+        android:id="@+id/tvTheTeam"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:text="@string/aboutTeam"
+        android:textColor="@color/colorGraySecondary"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="@+id/tvDetailApp"
+        app:layout_constraintStart_toStartOf="@+id/tvDetailApp"
+        app:layout_constraintTop_toBottomOf="@+id/tvDetailApp" />
+
+    <TextView
+        android:id="@+id/tvTxtEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Email"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:textColor="@color/colorGraySecondary"
+        app:layout_constraintEnd_toEndOf="@+id/tvTheTeam"
+        app:layout_constraintStart_toStartOf="@+id/tvTheTeam"
+        app:layout_constraintTop_toBottomOf="@+id/tvTheTeam" />
+
+    <TextView
+        android:id="@+id/tvEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/emailTeam"
+        android:textColor="@color/colorGraySecondary"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="@+id/tvTxtEmail"
+        app:layout_constraintStart_toStartOf="@+id/tvTxtEmail"
+        app:layout_constraintTop_toBottomOf="@+id/tvTxtEmail" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "452458722966",
+    "firebase_url": "https://saranalaporbandung.firebaseio.com",
+    "project_id": "saranalaporbandung",
+    "storage_bucket": "saranalaporbandung.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:452458722966:android:632ccd7706d9f4de",
+        "android_client_info": {
+          "package_name": "app.android.saranalaporbandung"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "452458722966-unqlo1nv7lulbknfsim39i11els5tfoj.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "app.android.saranalaporbandung",
+            "certificate_hash": "ef6da0084740da345bf423324a5d0e31dbed836c"
+          }
+        },
+        {
+          "client_id": "452458722966-mcar1vihl8svnj4ui2v9bfbu3s88e4g8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAurnyvDhvTkGm8TpKEC4J89M7769I64TE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "452458722966-mcar1vihl8svnj4ui2v9bfbu3s88e4g8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
