@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">SaranaLaporBandung</string>
+    <string name="app_name">Saung</string>
     <string name="app_name_desc">Sarana Lapor Bandung</string>
     <string name="motto">Menuju Bandung Juara \nLahir Batin</string>
     <string name="tutor1">Anda menemukan jalan rusak ? Sehingga \nmembuat anda tidak nyaman ? Laporkan \nlewat Saung agar keluhan anda langsung \nsampai ke pusat</string>
@@ -10,7 +10,10 @@
     <string name="title_home">Home</string>
     <string name="title_report">Report</string>
     <string name="title_more">More</string>
-    <string name="app_intro">CEkson</string>
+    <string name="app_intro">Saung</string>
+    <string name="profile_title">Profil</string>
+    <string name="edit_profile">Edit Profil</string>
+    <string name="edit_password">Ubah Password</string>
     <!-- Adding New String -->
     <string name="aboutTeam">My Point Team [SMKN 4 Bandung]\nNaufal Ahnaf Fauzan\nAip Ariyadi\nBarnes Yosia Nathanael\nIrvan Pebrian</string>
     <string name="emailTeam">mypointcompany@gmail.com</string>

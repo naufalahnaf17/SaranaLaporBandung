@@ -11,7 +11,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Report.AddReport"></activity>
+        <activity android:name=".More.ChangePassword"></activity>
+        <activity android:name=".More.EditProfie" />
+        <activity android:name=".Report.AddReport" />
         <activity android:name=".More.ContactUs" />
         <activity android:name=".More.AboutAplication" />
         <activity android:name=".More.SettingAplication" />

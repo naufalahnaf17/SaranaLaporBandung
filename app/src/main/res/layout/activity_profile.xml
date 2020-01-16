@@ -6,14 +6,24 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@color/colorMyBlue">
 
-    <include
+<!--    <include-->
+<!--        android:id="@+id/toolbarProfile"-->
+<!--        layout="@layout/toolbar_profile"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent" />-->
+
+    <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbarProfile"
-        layout="@layout/toolbar_profile"
+        android:minHeight="?attr/actionBarSize"
+        android:background="@color/colorMyBlue"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="64dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"/>
 
     <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/ivAccountP"
