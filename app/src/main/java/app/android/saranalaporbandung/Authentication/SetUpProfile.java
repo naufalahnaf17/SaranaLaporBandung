@@ -50,8 +50,8 @@ public class SetUpProfile extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_set_up_profile);
 
-        ivImage = (ImageView) findViewById(R.id.ivImage);
-        btnSimpan = (Button) findViewById(R.id.btnSimpan);
+        ivImage = (ImageView) findViewById(R.id.edtImage);
+        btnSimpan = (Button) findViewById(R.id.btnSimpanProfile);
         loading = (ProgressBar)findViewById(R.id.loading);
         eTxtNama = (EditText)findViewById(R.id.edtUsername);
 
