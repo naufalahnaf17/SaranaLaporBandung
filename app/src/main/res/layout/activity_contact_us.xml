@@ -71,7 +71,7 @@
         android:layout_marginEnd="16dp"
         android:ems="10"
         android:hint="Isi Pesan"
-        android:inputType="text"
+        android:inputType="textMultiLine"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -90,12 +90,12 @@
         app:layout_constraintTop_toBottomOf="@+id/edtMessage">
 
         <RelativeLayout
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="234dp">
 
             <TextView
                 android:id="@+id/tvAddImage"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
                 android:text="Tambah Tangkapan Layar (opsional) :"
@@ -111,20 +111,10 @@
 
             <ImageButton
                 android:id="@+id/btnAddImage1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:layout_below="@id/divider"
                 android:layout_margin="15dp"
-                android:background="@android:color/transparent"
-                android:src="@drawable/btn_add_photo" />
-
-            <ImageButton
-                android:id="@+id/btnAddImage2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/divider"
-                android:layout_marginTop="15dp"
-                android:layout_toRightOf="@id/btnAddImage1"
                 android:background="@android:color/transparent"
                 android:src="@drawable/btn_add_photo" />
 

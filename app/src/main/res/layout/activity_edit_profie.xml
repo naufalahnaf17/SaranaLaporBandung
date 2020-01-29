@@ -24,27 +24,6 @@
         app:srcCompat="@drawable/brown_rounded" />
 
     <EditText
-        android:id="@+id/edtUsername"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginLeft="32dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="32dp"
-        android:layout_marginRight="32dp"
-        android:layout_marginBottom="8dp"
-        android:background="@drawable/bg_input"
-        android:ems="10"
-        android:hint="Username"
-        android:inputType="text"
-        android:padding="15dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edtImage"
-        app:layout_constraintVertical_bias="0.060000002" />
-
-    <EditText
         android:id="@+id/edtNama"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -60,9 +39,9 @@
         android:inputType="text"
         android:padding="15dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/edtUsername"
-        app:layout_constraintStart_toStartOf="@+id/edtUsername"
-        app:layout_constraintTop_toBottomOf="@+id/edtUsername"
+        app:layout_constraintEnd_toEndOf="@+id/edtImage"
+        app:layout_constraintStart_toStartOf="@+id/edtImage"
+        app:layout_constraintTop_toBottomOf="@+id/edtImage"
         app:layout_constraintVertical_bias="0.050000012" />
 
     <Button
