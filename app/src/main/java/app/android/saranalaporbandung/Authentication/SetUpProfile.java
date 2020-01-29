@@ -53,7 +53,7 @@ public class SetUpProfile extends AppCompatActivity {
         ivImage = (ImageView) findViewById(R.id.edtImage);
         btnSimpan = (Button) findViewById(R.id.btnSimpanProfile);
         loading = (ProgressBar)findViewById(R.id.loading);
-        eTxtNama = (EditText)findViewById(R.id.edtUsername);
+        eTxtNama = (EditText)findViewById(R.id.edtPasswordLama);
 
         mAuth = FirebaseAuth.getInstance();
         mStorageRef = FirebaseStorage.getInstance().getReference("images");

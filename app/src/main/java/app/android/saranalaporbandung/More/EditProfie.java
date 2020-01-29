@@ -17,6 +17,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -44,6 +45,8 @@ public class EditProfie extends AppCompatActivity {
     Uri uriProfileImage;
     StorageTask uploadTask;
     String profileUrl;
+    ProgressBar loading;
+    Button btnSave;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -56,10 +59,8 @@ public class EditProfie extends AppCompatActivity {
         edtImage = (ImageView) findViewById(R.id.edtImage);
         mStorageRef = FirebaseStorage.getInstance().getReference("images");
 
-        Button btnSave = (Button) findViewById(R.id.btnSimpanProfile);
-
-        Toast.makeText(this, user.getPhotoUrl().toString(), Toast.LENGTH_SHORT).show();
-
+        btnSave = (Button) findViewById(R.id.btnSimpanProfile);
+        loading = (ProgressBar) findViewById(R.id.loading);
         edtImage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -70,6 +71,12 @@ public class EditProfie extends AppCompatActivity {
         btnSave.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
+                if (edtNama.getText().toString().isEmpty()){
+                    edtNama.setError("Nama Tidak Boleh Kosong");
+                    edtNama.requestFocus();
+                    return;
+                }
 
                 UserProfileChangeRequest profileUpdate = new UserProfileChangeRequest.Builder()
                         .setDisplayName(edtNama.getText().toString())
@@ -120,6 +127,8 @@ public class EditProfie extends AppCompatActivity {
     }
 
     private void uploadImage() {
+        loading.setVisibility(View.VISIBLE);
+        btnSave.setEnabled(false);
         if (uriProfileImage!= null){
 
             final StorageReference storageReference =
@@ -135,7 +144,8 @@ public class EditProfie extends AppCompatActivity {
                                 public void onSuccess(Uri uri) {
                                     String url = uri.toString();
                                     profileUrl = url;
-                                    Toast.makeText(EditProfie.this, profileUrl, Toast.LENGTH_SHORT).show();
+                                    loading.setVisibility(View.GONE);
+                                    btnSave.setEnabled(true);
                                 }
                             });
                         }

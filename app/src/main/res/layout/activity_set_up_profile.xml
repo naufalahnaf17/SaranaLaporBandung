@@ -22,7 +22,7 @@
         app:layout_constraintVertical_bias="0.164" />
 
     <EditText
-        android:id="@+id/edtUsername"
+        android:id="@+id/edtPasswordLama"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
@@ -71,8 +71,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
-        app:layout_constraintEnd_toEndOf="@+id/edtUsername"
-        app:layout_constraintStart_toStartOf="@+id/edtUsername"
-        app:layout_constraintTop_toBottomOf="@+id/edtUsername" />
+        app:layout_constraintEnd_toEndOf="@+id/edtPasswordLama"
+        app:layout_constraintStart_toStartOf="@+id/edtPasswordLama"
+        app:layout_constraintTop_toBottomOf="@+id/edtPasswordLama" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
