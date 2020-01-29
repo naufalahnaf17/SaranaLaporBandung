@@ -28,6 +28,7 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.UserProfileChangeRequest;
 import com.google.firebase.storage.FirebaseStorage;
+import com.google.firebase.storage.OnProgressListener;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.StorageTask;
 import com.google.firebase.storage.UploadTask;
@@ -127,7 +128,6 @@ public class EditProfie extends AppCompatActivity {
     }
 
     private void uploadImage() {
-        loading.setVisibility(View.VISIBLE);
         btnSave.setEnabled(false);
         if (uriProfileImage!= null){
 
@@ -144,10 +144,17 @@ public class EditProfie extends AppCompatActivity {
                                 public void onSuccess(Uri uri) {
                                     String url = uri.toString();
                                     profileUrl = url;
-                                    loading.setVisibility(View.GONE);
                                     btnSave.setEnabled(true);
+                                    btnSave.setText("Simpan");
                                 }
                             });
+                        }
+                    })
+
+                    .addOnProgressListener(new OnProgressListener<UploadTask.TaskSnapshot>() {
+                        @Override
+                        public void onProgress(UploadTask.TaskSnapshot taskSnapshot) {
+                            btnSave.setText("Loading . . .");
                         }
                     })
 
@@ -155,6 +162,7 @@ public class EditProfie extends AppCompatActivity {
                         @Override
                         public void onFailure(@NonNull Exception e) {
                             Toast.makeText(EditProfie.this, e.getMessage(), Toast.LENGTH_SHORT).show();
+                            btnSave.setText("Simpan");
                         }
                     });
 
