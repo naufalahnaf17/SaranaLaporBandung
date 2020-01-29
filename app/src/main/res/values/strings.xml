@@ -66,7 +66,7 @@ baik.</string>
         cukup untuk melindungi kerahasiaan alamat Gmail Anda, dan kami menggunakan Server Pribadi di
         Cloud kami (bukan Server Bersama).
     </string>
-
+    <string name="linkGPlay">http://saranalaporbandung.com</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="title_activity_main">MainActivity</string>

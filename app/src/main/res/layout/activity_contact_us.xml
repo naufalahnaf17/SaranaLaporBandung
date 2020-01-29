@@ -65,70 +65,28 @@
     <EditText
         android:id="@+id/edtMessage"
         android:layout_width="match_parent"
-        android:layout_height="40dp"
+        android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
         android:ems="10"
         android:hint="Isi Pesan"
-        android:inputType="textMultiLine"
+        android:ellipsize="none"
+        android:maxLines="20"
+        android:scrollHorizontally="false"
+        android:inputType="text|textMultiLine"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/edtSubject" />
 
-    <androidx.cardview.widget.CardView
-        android:id="@+id/imageGroup"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="8dp"
-        app:layout_constraintBottom_toTopOf="@+id/btnSend"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edtMessage">
-
-        <RelativeLayout
-            android:layout_width="wrap_content"
-            android:layout_height="234dp">
-
-            <TextView
-                android:id="@+id/tvAddImage"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="10dp"
-                android:text="Tambah Tangkapan Layar (opsional) :"
-                android:textColor="#4FC166"
-                android:textSize="18sp" />
-
-            <View
-                android:id="@+id/divider"
-                android:layout_width="match_parent"
-                android:layout_height="3dp"
-                android:layout_below="@id/tvAddImage"
-                android:background="@color/colorGraySecondary" />
-
-            <ImageButton
-                android:id="@+id/btnAddImage1"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_below="@id/divider"
-                android:layout_margin="15dp"
-                android:background="@android:color/transparent"
-                android:src="@drawable/btn_add_photo" />
-
-        </RelativeLayout>
-
-    </androidx.cardview.widget.CardView>
-
     <Button
         android:id="@+id/btnSend"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="16dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="28dp"
+        android:layout_marginBottom="36dp"
         android:background="@drawable/btn_main"
         android:text="kirim"
         android:textColor="@android:color/white"

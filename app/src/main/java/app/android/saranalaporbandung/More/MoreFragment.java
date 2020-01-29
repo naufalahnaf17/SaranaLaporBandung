@@ -78,7 +78,14 @@ public class MoreFragment extends Fragment {
                     Toast.makeText(getContext(), "Fitur Ini Belum Tersedia", Toast.LENGTH_SHORT).show();
                 } else if (position == 6) {
                     //kalo bagikan
-                    Toast.makeText(getContext(), "Fitur Ini Belum Tersedia", Toast.LENGTH_SHORT).show();
+                    Intent sendIntent = new Intent();
+                    sendIntent.setAction(Intent.ACTION_SEND);
+                    sendIntent.putExtra(Intent.EXTRA_TEXT, "http://saranalaporbandung.com");
+                    sendIntent.setType("text/plain");
+
+                    Intent shareIntent = Intent.createChooser(sendIntent, "Pilih Media");
+                    startActivity(shareIntent);
+//                    Toast.makeText(getContext(), "Fitur Ini Belum Tersedia", Toast.LENGTH_SHORT).show();
                 } else {
                     //null
                 }
