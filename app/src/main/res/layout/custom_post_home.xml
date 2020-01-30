@@ -96,18 +96,6 @@
                 android:src="@drawable/ic_vote_active" />
 
             <TextView
-                android:id="@+id/countVoterMe"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/photoPost"
-                android:layout_marginLeft="7dp"
-                android:layout_marginTop="10dp"
-                android:layout_toRightOf="@id/btnVote"
-                android:fontFamily="sans-serif"
-                android:text="121 Dukungan"
-                android:textSize="15sp" />
-
-            <TextView
                 android:id="@+id/detailPostMe"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"

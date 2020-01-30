@@ -4,6 +4,7 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -29,6 +30,8 @@ public class ImageAdapter extends RecyclerView.Adapter<ImageAdapter.ImageViewHol
     private FirebaseAuth mAuth;
     private FirebaseUser user;
 
+    private int likeStat = 0;
+
     public ImageAdapter(Context context, List<Adapter> adapters) {
         mContext = context;
         mAdapters = adapters;
@@ -43,7 +46,7 @@ public class ImageAdapter extends RecyclerView.Adapter<ImageAdapter.ImageViewHol
     }
 
     @Override
-    public void onBindViewHolder(ImageViewHolder holder, int position) {
+    public void onBindViewHolder(final ImageViewHolder holder, int position) {
         final Adapter adapterCurrent = mAdapters.get(position);
 
         //photo Account
@@ -61,9 +64,6 @@ public class ImageAdapter extends RecyclerView.Adapter<ImageAdapter.ImageViewHol
         //date Post
         holder.datePost.setText(adapterCurrent.getDatePost());
 
-        //like Post
-        holder.countVoter.setText(adapterCurrent.getLikePost());
-
         //status Post
         holder.statusVoter.setText(adapterCurrent.getStatusPost());
 
@@ -77,6 +77,22 @@ public class ImageAdapter extends RecyclerView.Adapter<ImageAdapter.ImageViewHol
 
         //Username User Account Who Post The Fucking Picture
         holder.nameAccount.setText(adapterCurrent.getNameUserPost());
+
+        //Vote Postingan
+        holder.btnVote.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                if (likeStat == 0){
+                    likeStat = 1;
+                    holder.btnVote.setImageResource(R.drawable.like);
+                }else if(likeStat == 1) {
+                    likeStat = 0;
+                    holder.btnVote.setImageResource(R.drawable.ic_vote_active);
+                }
+
+            }
+        });
 
 
         holder.card.setOnLongClickListener(new View.OnLongClickListener() {
@@ -94,9 +110,10 @@ public class ImageAdapter extends RecyclerView.Adapter<ImageAdapter.ImageViewHol
     }
 
     public class ImageViewHolder extends RecyclerView.ViewHolder  {
-        public TextView contentPost , nameAccount , datePost , countVoter , statusVoter ,locationPost;
+        public TextView contentPost , nameAccount , datePost , statusVoter ,locationPost;
         public ImageView photoPost , photoAccount;
         public CardView card;
+        public ImageButton btnVote;
 
         public ImageViewHolder(View itemView) {
             super(itemView);
@@ -107,9 +124,9 @@ public class ImageAdapter extends RecyclerView.Adapter<ImageAdapter.ImageViewHol
             card = itemView.findViewById(R.id.cardPost);
             nameAccount = itemView.findViewById(R.id.nameAccount);
             datePost = itemView.findViewById(R.id.datePost);
-            countVoter = itemView.findViewById(R.id.countVoterMe);
             statusVoter = itemView.findViewById(R.id.detailPostMe);
             locationPost = itemView.findViewById(R.id.locatePost);
+            btnVote = itemView.findViewById(R.id.btnVote);
         }
 
 
