@@ -53,7 +53,7 @@
         <ListView
             android:id="@+id/lvMenu"
             android:layout_width="match_parent"
-            android:layout_height="310dp"
+            android:layout_height="wrap_content"
             android:padding="10dp"
             tools:listitem="@layout/custom_lv_menu"></ListView>
 
@@ -77,12 +77,12 @@
             xmlns:android="http://schemas.android.com/apk/res/android"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="10dp">
+            android:padding="5dp">
 
             <ImageView
                 android:id="@+id/imgExit"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
                 android:src="@drawable/ic_exit"
                 android:layout_marginLeft="10dp"/>
 
@@ -91,7 +91,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="#1C3B57"
-                android:textSize="20sp"
+                android:textSize="18sp"
                 android:text="Keluar"
                 android:layout_toRightOf="@id/imgExit"
                 android:layout_centerVertical="true"
