@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory
+        android:title="Notifikasi">
+        <SwitchPreference
+            android:key="notification"
+            android:title="@string/title_notification"
+            android:summary="@string/subtitle_notification"/>
+        <ListPreference
+            android:key="list_preference"
+            android:title="@string/title_ringtone"
+            android:dialogTitle="Pilih Ringtone"
+            android:entries="@array/list_ringtone"
+            android:entryValues="@array/list_ringtone" />
+        <CheckBoxPreference
+            android:key="sound"
+            android:title="@string/title_sound" />
+        <CheckBoxPreference
+            android:key="vibrate"
+            android:title="@string/title_vibrate" />
+        <CheckBoxPreference
+            android:key="led"
+            android:title="@string/title_led" />
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="Lokasi">
+        <SwitchPreference
+            android:key="location"
+            android:title="@string/title_location"
+            android:summary="@string/subtitle_location"/>
+    </PreferenceCategory>
+
+</PreferenceScreen>

@@ -85,7 +85,7 @@ public class ImageAdapter extends RecyclerView.Adapter<ImageAdapter.ImageViewHol
 
                 if (likeStat == 0){
                     likeStat = 1;
-                    holder.btnVote.setImageResource(R.drawable.like);
+                    holder.btnVote.setImageResource(R.drawable.ic_vote_deactive);
                 }else if(likeStat == 1) {
                     likeStat = 0;
                     holder.btnVote.setImageResource(R.drawable.ic_vote_active);
