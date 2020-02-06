@@ -33,12 +33,13 @@ import java.util.Date;
 import java.util.Locale;
 
 import app.android.saranalaporbandung.Adapter.Adapter;
+import app.android.saranalaporbandung.Adapter.Point;
 import app.android.saranalaporbandung.R;
 
 public class AddReport extends AppCompatActivity {
 
     private FirebaseAuth mAuth;
-    private DatabaseReference ref , userRef;
+    private DatabaseReference ref , userRef , pointRef;
     private static final int CHOOSE_IMAGE = 102;
     private ImageView imageReport;
     StorageReference storageRef;
@@ -63,6 +64,7 @@ public class AddReport extends AppCompatActivity {
 
         ref = FirebaseDatabase.getInstance().getReference("laporan");
         userRef = FirebaseDatabase.getInstance().getReference("users").child("laporan").child(id);
+        pointRef = FirebaseDatabase.getInstance().getReference("users").child("point").child(id);
 
         imageReport = (ImageView)findViewById(R.id.btnPickImage);
         imageReport.setOnClickListener(new View.OnClickListener() {
@@ -106,10 +108,13 @@ public class AddReport extends AppCompatActivity {
                                     String locationPost = edtLokasi.getText().toString().trim();
                                     String urlPostPicture = uri.toString();
                                     String nameUserPost = currentUser.getDisplayName();
+                                    String point = "60";
                                     String date = new SimpleDateFormat("MMM-dd-yyyy", Locale.getDefault()).format(new Date());
                                     Adapter adapter = new Adapter(idPost,captionPost,locationPost,date,"0","menunggu",urlPostPicture,currentUser.getPhotoUrl().toString(),nameUserPost);
+                                    Point adapPoint = new Point(point);
                                     ref.child(idPost).setValue(adapter);
                                     userRef.child(idPost).setValue(adapter);
+                                    pointRef.child(idPost).setValue(adapPoint);
                                 }
                             });
                         }

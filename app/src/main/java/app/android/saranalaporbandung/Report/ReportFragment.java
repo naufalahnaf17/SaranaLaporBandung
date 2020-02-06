@@ -35,12 +35,12 @@ import app.android.saranalaporbandung.R;
 public class ReportFragment extends Fragment {
     private FirebaseAuth mAuth;
     private ImageView myPhoto;
-    private TextView myName , myPost;
+    private TextView myName , myPost , myPoint;
     private UserLaporanAdapter mAdapter;
     private FloatingActionButton fab;
     private RecyclerView userRecyclerView;
     private FirebaseStorage storage;
-    private DatabaseReference databaseReference;
+    private DatabaseReference databaseReference,databasePoint;
     private ValueEventListener listener;
     private List<Adapter> userLaporanList;
 
@@ -59,6 +59,7 @@ public class ReportFragment extends Fragment {
         myPhoto = (ImageView) view.findViewById(R.id.myPhoto);
         myName = (TextView) view.findViewById(R.id.myName);
         myPost = (TextView) view.findViewById(R.id.myPost);
+        myPoint = (TextView) view.findViewById(R.id.myPoint);
         fab = (FloatingActionButton) view.findViewById(R.id.btnAddReport);
 
         userRecyclerView = view.findViewById(R.id.rvMyPost);
@@ -74,6 +75,7 @@ public class ReportFragment extends Fragment {
         storage = FirebaseStorage.getInstance();
         String userId = user.getUid();
         databaseReference = FirebaseDatabase.getInstance().getReference("users").child("laporan");
+        databasePoint = FirebaseDatabase.getInstance().getReference("users").child("point");
 
         if (user.getDisplayName()!=null){
             myName.setText(user.getDisplayName());
@@ -121,7 +123,24 @@ public class ReportFragment extends Fragment {
                 Toast.makeText(getContext(), databaseError.getMessage(), Toast.LENGTH_SHORT).show();
             }
         });
+        listener = databasePoint.child(userId).limitToLast(1).addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                if (dataSnapshot.exists()){
+                    for (DataSnapshot child: dataSnapshot.getChildren()) {
+                        String idPointRandom = child.getKey();
+                        myPoint.setText(dataSnapshot.child(idPointRandom).child("point").getValue().toString());
+                    }
+                }else {
+                    Toast.makeText(getContext(), "Tidak Ada Data", Toast.LENGTH_SHORT).show();
+                }
+            }
 
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+
+            }
+        });
 
     }
 }
