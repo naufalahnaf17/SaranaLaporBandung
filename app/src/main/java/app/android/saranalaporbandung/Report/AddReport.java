@@ -19,8 +19,11 @@ import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.OnProgressListener;
 import com.google.firebase.storage.StorageReference;
@@ -39,6 +42,7 @@ import app.android.saranalaporbandung.R;
 public class AddReport extends AppCompatActivity {
 
     private FirebaseAuth mAuth;
+    private DatabaseReference databasePoint;
     private DatabaseReference ref , userRef , pointRef;
     private static final int CHOOSE_IMAGE = 102;
     private ImageView imageReport;
@@ -47,6 +51,8 @@ public class AddReport extends AppCompatActivity {
     StorageTask uploadTask;
     ProgressBar loading;
     EditText edtLaporan , edtLokasi;
+    int currentPoint;
+    private ValueEventListener listener;
 
 
     @Override
@@ -55,6 +61,7 @@ public class AddReport extends AppCompatActivity {
         setContentView(R.layout.activity_add_report);
 
         storageRef = FirebaseStorage.getInstance().getReference("laporan");
+        databasePoint = FirebaseDatabase.getInstance().getReference("users").child("point");
         mAuth = FirebaseAuth.getInstance();
         FirebaseUser user = mAuth.getCurrentUser();
         final String id = user.getUid();
@@ -65,6 +72,26 @@ public class AddReport extends AppCompatActivity {
         ref = FirebaseDatabase.getInstance().getReference("laporan");
         userRef = FirebaseDatabase.getInstance().getReference("users").child("laporan").child(id);
         pointRef = FirebaseDatabase.getInstance().getReference("users").child("point").child(id);
+
+        listener = databasePoint.child(id).limitToLast(1).addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                if (dataSnapshot.exists()){
+                    for (DataSnapshot child: dataSnapshot.getChildren()) {
+                        String idPointRandom = child.getKey();
+                        String pointSekarang = dataSnapshot.child(idPointRandom).child("point").getValue().toString();
+                        currentPoint = Integer.parseInt(pointSekarang);
+                    }
+                }else {
+                    Toast.makeText(getApplicationContext(), "Tidak Ada Data", Toast.LENGTH_SHORT).show();
+                }
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+
+            }
+        });
 
         imageReport = (ImageView)findViewById(R.id.btnPickImage);
         imageReport.setOnClickListener(new View.OnClickListener() {
@@ -108,10 +135,12 @@ public class AddReport extends AppCompatActivity {
                                     String locationPost = edtLokasi.getText().toString().trim();
                                     String urlPostPicture = uri.toString();
                                     String nameUserPost = currentUser.getDisplayName();
-                                    String point = "60";
+                                    String point = "30";
+                                    int pointUpdate = Integer.parseInt(point);
+                                    int hasilPoint = pointUpdate + currentPoint;
                                     String date = new SimpleDateFormat("MMM-dd-yyyy", Locale.getDefault()).format(new Date());
                                     Adapter adapter = new Adapter(idPost,captionPost,locationPost,date,"0","menunggu",urlPostPicture,currentUser.getPhotoUrl().toString(),nameUserPost);
-                                    Point adapPoint = new Point(point);
+                                    Point adapPoint = new Point(String.valueOf(hasilPoint));
                                     ref.child(idPost).setValue(adapter);
                                     userRef.child(idPost).setValue(adapter);
                                     pointRef.child(idPost).setValue(adapPoint);
