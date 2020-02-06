@@ -82,14 +82,38 @@ baik.</string>
     <string name="title_location">Akses Lokasi</string>
     <string name="subtitle_location">Aplikasi Dapat Mengakses Lokasi Anda</string>
     <string-array name="list_ringtone">
-        <item>Ringtone 1</item>
-        <item>Ringtone 2</item>
-        <item>Ringtone 3</item>
-        <item>Ringtone 4</item>
-        <item>Ringtone 5</item>
-        <item>Ringtone 6</item>
-        <item>Ringtone 7</item>
-        <item>Ringtone 8</item>
-        <item>Ringtone 9</item>
+        <item>Arcturus</item>
+        <item>Argo Navis</item>
+        <item>Backroad</item>
+        <item>Beat Plucker</item>
+        <item>Bell Phone</item>
+        <item>Bellatrix</item>
+        <item>Bentley Dubs</item>
+        <item>Big Easy</item>
+        <item>Bird Loop</item>
+        <item>Capella</item>
+        <item>Castor</item>
+        <item>Cesium</item>
+        <item>Dancin\' Fool</item>
+        <item>Ding</item>
+        <item>Drip</item>
+        <item>Electrica</item>
+        <item>Machina</item>
+        <item>Merope</item>
+        <item>Orion</item>
+        <item>Pixie Dust</item>
+        <item>Pocyon</item>
+        <item>Rigel</item>
+        <item>Safari</item>
+        <item>Savannah</item>
+        <item>Sceptrum</item>
+        <item>Selenium</item>
+        <item>Terminated</item>
+        <item>Tinkerbell</item>
+        <item>Voila</item>
+        <item>World</item>
+        <item>Xenon</item>
+        <item>Zeta</item>
+        <item>Zirconium</item>
     </string-array>
 </resources>
