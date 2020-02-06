@@ -46,7 +46,7 @@ public class UserLaporanAdapter extends RecyclerView.Adapter<UserLaporanAdapter.
 
         Glide.with(mContext)
                 .load(adapterCurrent.getUrlPost())
-                .placeholder(R.mipmap.ic_launcher)
+                .placeholder(R.drawable.loading)
                 .fitCenter()
                 .centerCrop()
                 .into(holder.imagePost);

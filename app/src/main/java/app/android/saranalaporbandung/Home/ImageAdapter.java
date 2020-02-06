@@ -70,7 +70,7 @@ public class ImageAdapter extends RecyclerView.Adapter<ImageAdapter.ImageViewHol
         //Content Image Post
         Glide.with(mContext)
                 .load(adapterCurrent.getUrlPost())
-                .placeholder(R.mipmap.ic_launcher)
+                .placeholder(R.drawable.loading)
                 .fitCenter()
                 .centerCrop()
                 .into(holder.photoPost);
